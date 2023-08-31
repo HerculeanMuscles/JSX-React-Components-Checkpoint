@@ -2,7 +2,7 @@ import React from "react";
 import product from "./product";
 
 function Price() {
-	return <>{product.price}</>;
+	return <>Price : ${product.price}</>;
 }
 
 export default Price;
