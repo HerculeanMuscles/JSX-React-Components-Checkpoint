@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+import logo from "./OIP2.jpg";
 import Name from "./components/Name";
 import "./App.css";
 import Description from "./components/Description";
@@ -7,7 +7,7 @@ import Card from "react-bootstrap/Card";
 import product from "./components/product";
 
 function App() {
-	let Uname = "Bob";
+	let Uname = "Patrick";
 	return (
 		<>
 			<div
@@ -16,11 +16,13 @@ function App() {
 					justifyContent: "center",
 					alignItems: "center",
 					flexDirection: "column",
+					backgroundColor: "gray",
+					width: "500px",
 				}}
-				className="container"
+				className="container mt-3 rounded-3"
 			>
 				{/* This is card, that will take all the seperate components into one */}
-				<Card style={{ width: "18rem" }}>
+				<Card className="mt-3" style={{ width: "18rem" }}>
 					<Card.Img variant="top" src={product.image} />
 					<Card.Body>
 						<Card.Title>
@@ -35,17 +37,15 @@ function App() {
 				</Card>
 
 				<br />
-				<br />
-				<br />
 
 				{/* below is a condition if a username is given.
 				if given, it will show hello, the name, and a picture
 				if not, then it will show hello you */}
 				{Uname ? (
 					<>
-						<div>
+						<div className="square border border-dark bg-primary mb-3 rounded-3 text-center">
 							<p>Hello, {Uname}</p>{" "}
-							<img className="w-25" src={logo} alt="Profile Picture" />
+							<img className="w-50" src={logo} alt="Logo" />
 						</div>
 					</>
 				) : (
